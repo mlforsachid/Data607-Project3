@@ -1,8 +1,8 @@
 ---
 title: "Data-607 Project-3"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 ##---------------------------------------------------------------------------
@@ -10,10 +10,10 @@ output:
 ###**Students Name :** Sachid Deshmukh, Mohammad Younus, Robert Lauto, Santosh Manjrekar, Olga Shiligin, Hantz Angrand
 
 ###**Date :** 10/18/2018
-* > [GitHub Location for rmd file](RMD File URL for Git Hub)
-* > [GitHub Location for pdf file](PDF File URL for Git Hub)
-* > [RPubs location of published file](RPubs File URL for Git Hub)
-* > [Data File](Data File URL for Git Hub)
+* > [GitHub Location for rmd file](https://github.com/mlforsachid/Data607-Project3/blob/master/Misc/Data607Project3.rmd)
+* > [GitHub Location for pdf file](https://github.com/mlforsachid/Data607-Project3/blob/master/Misc/Data607Project3.pdf)
+* > [RPubs location of published file](http://rpubs.com/sachid/Data607-Project3)
+* > [Data File](https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Misc/globalterrorism.csv)
 
 ##---------------------------------------------------------------------------
 
