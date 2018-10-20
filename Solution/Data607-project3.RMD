@@ -1,0 +1,75 @@
+---
+title: "Data607-Project3"
+author: "Santosh Manjrekar, Sanchid Deshmukh, Faizan Younus,Robert Lauto"
+date: "October 14, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(xml2)
+```
+
+```{r}
+library(XML)
+library(stringr)
+library(knitr)
+
+get_indeed_url <- function(skill, base_term, city, radius){
+  indeed_url <- paste("http://www.indeed.com/jobs?q=",trimws(skill),"+",trimws(base_term),"&l=",city,"&radius=",radius, sep = "")
+  return (indeed_url)
+}
+
+get_count <- function(indeed_url){
+  indeed_web_result <- readLines(indeed_url)
+  find_jobcount_text=grep("<meta name=\"description\"",indeed_web_result)
+
+ 
+  job_count_text =indeed_web_result[find_jobcount_text]
+  # prepare regular expression
+  regexp <- "[[:digit:]]+"
+
+  # process string
+  job_count =as.numeric(str_extract(job_count_text, regexp))
+  job_count
+
+  return (job_count)
+}
+
+write_indeed_results <- function(base_skill_list, skill_terms, cities, radius_list){
+  
+  skill_terms
+  grid <- expand.grid(base_skill_list, skill_terms, cities, radius_list)
+  dfx <- data.frame(grid)
+  colnames(dfx) <- c("Base_Skill","Skill_Term","City","radius")
+  
+  
+  dfx$indeed_url <- mapply(get_indeed_url, dfx$Skill_Term, dfx$Base_Skill, dfx$City, dfx$radius)
+  dfx$jobs_count <- mapply(get_count, dfx$indeed_url)
+
+  write.csv(dfx, file = "Indeed_Job_Search_Results.csv", row.names = FALSE, na = "")
+
+  kable(head(dfx, n = 20))  
+}
+
+run_indeed_job_search <- function(){
+  base_skill <- c('Data Scientist')
+  skill_terms.df <- read.csv("indeed_skills.csv", header = TRUE)
+  skill_terms <- trimws(skill_terms.df$SKILL)
+  head(skill_terms)
+  
+  cities.df <- read.csv("indeed_city_state.csv", header = TRUE)
+  cities <- paste(trimws(cities.df$CITY), trimws(cities.df$STATE), sep=",")
+  head(cities)
+  
+  radius_list <- c(50)
+
+  write_indeed_results(trimws(base_skill), trimws(skill_terms), trimws(cities), trimws(radius_list))
+}
+
+run_indeed_job_search()
+
+```
+
