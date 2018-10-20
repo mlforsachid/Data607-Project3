@@ -1,9 +1,11 @@
 ---
 title: "Data607-Project3"
-author: "Santosh Manjrekar, Sanchid Deshmukh, Faizan Younus,Robert Lauto"
+author: "Sachid Deshmukh, Mohammad Younus, Robert Lauto, Santosh Manjrekar, Olga Shiligin, Hantz Angrand"
 date: "October 14, 2018"
 output: html_document
 ---
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -56,11 +58,11 @@ write_indeed_results <- function(base_skill_list, skill_terms, cities, radius_li
 
 run_indeed_job_search <- function(){
   base_skill <- c('Data Scientist')
-  skill_terms.df <- read.csv("indeed_skills.csv", header = TRUE)
+  skill_terms.df <- read.csv("https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/indeed_skills.csv", header = TRUE)
   skill_terms <- trimws(skill_terms.df$SKILL)
   head(skill_terms)
   
-  cities.df <- read.csv("indeed_city_state.csv", header = TRUE)
+  cities.df <- read.csv("https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/indeed_city_state.csv", header = TRUE)
   cities <- paste(trimws(cities.df$CITY), trimws(cities.df$STATE), sep=",")
   head(cities)
   
