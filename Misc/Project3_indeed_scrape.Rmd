@@ -24,9 +24,7 @@ library(knitr)
 base_url <- 'https://www.indeed.com/'
 search_url <- paste0(base_url, 'jobs?q=data+scientist&l=New+York%2c+NY&start=0')
 ```
-```{r}
-#base_linkedin <- 'https://www.linkedin.com/search/results/people/v2/?origin=FACETED_SEARCH&page=1&title=data%20scientist'
-```
+
 ## Reading the html file to get the total job count.
 ```{r}
 first_page <- read_html(search_url)
@@ -85,8 +83,8 @@ kws <- c('Python',
          regex('teamwork|team work', ignore_case = T),
          regex('business acumen', ignore_case = T),
          'remote(ly)?',
-         regex('Bachelors| BA ', ignore_case = T),
-         regex('Masters| MA', ignore_case = T),
+         regex('Bachelors| BA | BS ', ignore_case = T),
+         regex('Masters| MA | MS ', ignore_case = T),
          'PhD',
          regex('Computer Science', ignore_case = T),
          regex('Computer Engineering', ignore_case = T),
@@ -178,11 +176,11 @@ for(i in 1:length(page_links)){
 
 search_results
 ```
-Writing csv file to then be loaded into the MySQL db
+## Writing csv file to then be loaded into the MySQL db
 ```{r}
 write.csv(search_results$key_word_count,file = 'NY_indeed_results.csv', row.names = F)
 ```
-We then created a connection to MySQL and then create a `tbl_df` with the table from MySQL
+## We then created a connection to MySQL and then create a `tbl_df` with the table from MySQL
 ```{r echo=F,message = F}
 project3db <- src_mysql('project3', host = 'localhost', port = 3306, user = 'root', password = 'root12345')
 ```
@@ -190,4 +188,28 @@ project3db <- src_mysql('project3', host = 'localhost', port = 3306, user = 'roo
 NY_indeed_results <- tbl(project3db, 'NY_indeed_results')
 NY_indeed_results <- NY_indeed_results %>% tbl_df()
 kable(NY_indeed_results)
+```
+## Loading monster csv
+```{r}
+monster <- read.csv('Data/monster_com-job_sample.csv')
+```
+## Tidying and filtering monster csv
+```{r}
+colnames(monster)
+
+monster_data_jobs <- monster %>% 
+  select(job_title, job_description, date_added, country, country_code, location, salary, organization) %>% 
+  filter(grepl(regex('Data Scientist|Data Science', ignore_case = T),job_title))
+monster_count <-  data.frame(type = type, key_words = key_names, count = rep(0, length(key_names)))
+monster_count
+length(monster_data_jobs)
+
+for(i in 1:length(monster_data_jobs)){
+  
+  df2 <- data.frame(key_word = kws, count = ifelse(str_detect(monster_data_jobs$job_description, kws),1,0))
+  monster_count$count <- monster_count$count + df2$count
+  }
+monster_count
+write.csv(monster_data_jobs,file = 'monster_data_science_jobs.csv', row.names = F)
+write.csv(monster_count,file = 'monster_skill_count.csv', row.names = F)
 ```
