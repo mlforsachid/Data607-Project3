@@ -1,0 +1,193 @@
+---
+title: "DATA 607 Project 3"
+author: "Robert Lauto"
+date: "10/20/2018"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: united
+  
+---
+# Data 607 Project 3
+```{r eval=T, echo=F,message = F}
+library(rvest)
+library(stringr)
+library(dplyr)
+library(dbplyr)
+library(ggplot2)
+library(tidyr)
+library(knitr)
+```
+## Creating the base URL and first page of the search URL to see how many jobs are listed for data scientists in NY.
+```{r}
+base_url <- 'https://www.indeed.com/'
+search_url <- paste0(base_url, 'jobs?q=data+scientist&l=New+York%2c+NY&start=0')
+```
+```{r}
+#base_linkedin <- 'https://www.linkedin.com/search/results/people/v2/?origin=FACETED_SEARCH&page=1&title=data%20scientist'
+```
+## Reading the html file to get the total job count.
+```{r}
+first_page <- read_html(search_url)
+
+job_count <- unlist(strsplit(first_page %>% 
+                               html_node("#searchCount") %>%
+                               html_text(), split = ' ')) 
+
+job_count <- as.numeric(str_replace_all(job_count[length(job_count)-1],',',''))
+
+job_count
+```
+```{r}
+#first_li <- read_html(base_linkedin)
+
+#ln_job_count <- first_li %>% 
+#                html_nodes("ul.search-results_list")
+#ln_job_count
+#"li.search-result search-result__occluded-item ember-view"
+```
+## Getting the job links from each page
+```{r}
+# this only selects for the 10 jobs listed on each page, sponsored jobs have different nodes
+links <- first_page %>%
+  html_nodes("h2 a") %>%
+  html_attr('href')
+
+# creating an empty list to hold the page links
+page_links <- list(rep(NA, 243))
+
+# create the list of search page links
+page_links <- paste0(paste0(base_url,'jobs?q=data+scientist&l=New+York%2c+NY&start='),seq(0,job_count,10))
+```
+## Creating vector of words to search for in job descriptions and the empty data frame to store data in.
+```{r}
+kws <- c('Python',
+         '\\w{0,10} ?SQL',
+         '\\bR\\b',
+         'Spark',
+         'SAS',
+         'Excel',
+         '\\bAWS\\b',
+         'Java',
+         'Tableau',
+         'Looker',
+         'Hadoop',
+         'PHP',
+         'Ruby',
+         'Matlab',
+         'C\\+\\+',
+         regex('communication skills',ingore_case=T),
+         'inquisitive',
+         regex('presentation skills',ignore_case = T),
+         regex('manage|(team management)',ignore_case = T),
+         regex('team leader', ignore_case = T),
+         regex('teamwork|team work', ignore_case = T),
+         regex('business acumen', ignore_case = T),
+         'remote(ly)?',
+         regex('Bachelors| BA ', ignore_case = T),
+         regex('Masters| MA', ignore_case = T),
+         'PhD',
+         regex('Computer Science', ignore_case = T),
+         regex('Computer Engineering', ignore_case = T),
+         regex('Statistics|Stats', ignore_case = T),
+         regex('Math|(Applied Math)', ignore_case = T)
+         )
+
+# vector of clean names to use for the data frame row names
+key_names <- c('Python',
+               'SQL',
+               'R',
+               'Spark',
+               'SAS',
+               'Excel',
+               'AWS',
+               'Java',
+               'Tableau',
+               'Looker',
+               'Hadoop',
+               'PHP',
+               'Ruby',
+               'Matlab',
+               'C++',
+               'communication skills',
+               'inquisitive',
+               'presentation skills',
+               'manage',
+               'team leader',
+               'teamwork',
+               'business acumen',
+               'remote',
+               'Bachelors',
+               'Masters',
+               'PhD',
+               'Computer Science',
+               'Computer Engineering',
+               'Statistics',
+               'Math'
+               )
+
+type <-c(rep('hard',15),rep('soft',8),rep('education',7))
+type
+# empty data frame
+kw_count <- data.frame(type = type, key_words = key_names, count = rep(0, length(key_names))) 
+
+# job count
+njobs <- 0
+
+search_results <- list('key_word_count' = kw_count, 'njobs' = njobs)
+```
+## Scraping function
+A function to iterate through the job links on a search page. By itself it will go through the first page with 10 jobs, search each jobs descriptions for a mention of each specified skill, and add a count to the empty data frame. It will also keep count of the number of job links opened and processed.
+```{r}
+scrape <- function(searchResults, job_links){
+  for(i in 1:length(job_links)){
+    job_url <- paste0(base_url,job_links[i])
+    
+    Sys.sleep(.5)
+    cat('Reading job ', i, ' \n')
+    
+    tryCatch({
+      html <- read_html(job_url)
+      text <- html_text(html)
+      df <- data.frame(key_word = kws, count = ifelse(str_detect(text, kws), 1, 0))
+      searchResults$key_word_count$count <- searchResults$key_word_count$count + df$count
+      searchResults$njobs <- searchResults$njobs + 1
+    }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
+  }
+  return(searchResults)
+}
+```
+## Looping the scrape function
+Creating a for loop to iterate through all of the page links and apply the scrape function to each page.
+```{r eval = F}
+for(i in 1:length(page_links)){
+  print('on to the next 10 jobs')
+  
+  next_page <- read_html(page_links[i])
+  
+  links <- next_page %>%
+  html_nodes("h2 a") %>%
+  html_attr('href')
+  
+  search_results <- scrape(search_results, links)
+  
+  cat('number of jobs listings processed: ', search_results$njobs, ' \n')
+  
+}
+
+search_results
+```
+Writing csv file to then be loaded into the MySQL db
+```{r}
+write.csv(search_results$key_word_count,file = 'NY_indeed_results.csv', row.names = F)
+```
+We then created a connection to MySQL and then create a `tbl_df` with the table from MySQL
+```{r echo=F,message = F}
+project3db <- src_mysql('project3', host = 'localhost', port = 3306, user = 'root', password = 'root12345')
+```
+```{r}
+NY_indeed_results <- tbl(project3db, 'NY_indeed_results')
+NY_indeed_results <- NY_indeed_results %>% tbl_df()
+kable(NY_indeed_results)
+```
