@@ -1,0 +1,105 @@
+---
+title: "Project3_Analysis"
+author: "Hantz Angrand"
+date: "October 22, 2018"
+output: pdf_document
+---
+#Load required packages
+```{r}
+library(plyr)
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+library(dplyr)
+```
+```{r}
+library(tidyr)
+
+```
+
+#Step 1
+Load the data
+```{r}
+indeed_url<-url('https://raw.githubusercontent.com/mlforsachid/Data607-Project3/master/Data/Indeed_Job_Search_Results.csv')
+read_indeed_url<-read.csv(indeed_url,header = TRUE, stringsAsFactors = TRUE, sep = ',')
+head(read_indeed_url)
+```
+
+
+#Step2 Tidying the data
+```{r}
+#Removing the radius column
+read_indeed_url<-read_indeed_url[,-5]
+head(read_indeed_url)
+
+```
+
+```{r}
+#Rename the columns
+names(read_indeed_url)<-c('Source', 'Job Title','Skills','City','url','Count')
+head(read_indeed_url)
+```
+
+Removing NA value in the dataset
+```{r}
+read_indeed_url<-na.omit(read_indeed_url)
+head(read_indeed_url)
+```
+
+
+
+#Aggregate the skills to get the frequency
+```{r}
+indeed_skillaggr<-aggregate(read_indeed_url$Count,by=list(Category=read_indeed_url$Skills), FUN=sum)
+indeed_skillaggr
+```
+Jobs by skills
+```{r}
+skills_count<-read_indeed_url %>%
+  group_by(Skills) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+
+skills_count
+```
+
+Jobs opening by City
+```{r}
+skills_city<-read_indeed_url %>%
+  group_by(Skills,City) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+
+skills_city
+```
+
+
+
+#Step3 Data Visualization
+```{r}
+plots_top<-tail(skills_count,20)
+
+ggplot(plots_top, aes(plots_top$Skills, plots_top$Total)) + geom_bar(stat="identity")
+```
+
+
+
+```{r}
+top10_skills<-skills_city[1:10,]
+ggplot(top10_skills, aes(x=Skills, y=Total, colour= City, size = Total)) + geom_point()
+```
+
+```{r}
+library(wordcloud)
+
+wordcloud(skills_count$Skills,skills_count$Total, random.order=FALSE, colors=brewer.pal(8,"Dark2"))
+```
+
+
+#Step4 Conclusion
+The top 5 skills are oriented towards Big Data, Python, R are the word most used in the dataset.  Our finding show a few skills underlie the field of data science.Certainly mathematics and Statistics should play a role in our study but they are not part of our dataset.  We cannot conclude definitely about on demand skills since some other skills are missing in the dataset.
+
