@@ -1,0 +1,64 @@
+---
+title: "Data-607 Project-3 Final Presentation"
+output:
+  html_document:
+    css: ./lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+  word_document: default
+---
+##---------------------------------------------------------------------------
+
+###**Author Names :** Sachid Deshmukh, Robert Lauto, Santosh Manjrekar, Hantz Angrand
+
+###**Date :** 10/28/2018
+
+* > [GitHub Location of Web Scrapping file](Git hub URL of Web Scrapping file)
+* > [GitHub Location of Data Analytics file](Git hub url of Data Analytics file)
+* > [GitHub location of Database Transformation file](Git hub url of Database transformation file)
+* > [GitHub location of Final Presentation file](Git hub url of Final Presentation file)
+* > [RPubs Location of Web Scrapping file](RPubs URL of Web Scrapping file)
+* > [RPubs Location of Data Analytics file](RPubs url of Data Analytics file)
+* > [RPubs location of Database Transformation file](RPubs url of Database transformation file)
+* > [RPubs location of Final Presentation file](RPubs url of Final Presentation file)
+
+##---------------------------------------------------------------------------
+
+1. > Approach
+
+Explain overall approach taken here
+
+
+2. > Team Introduction
+
+* > Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation slide
+* > Santosh Manjrekar : Web scrapping and Data preparation
+* > Robert Lauto : Web Scrapping and Data preparation
+* > Hantz Angrand : Data Analytics and visualization
+
+3. > Team communication
+
+Team used various modes of commnication while working on the project
+
+1] Slack Channel
+2] Video conference
+3] Email
+4] Git Repo
+
+4. > Scrapping data from web
+
+Explain various data sources and pros and cons here
+
+5. > Transofrming and Storing data in database
+
+Explain more about data store and authentication mechanism
+
+6. > Visualization and analysis
+
+Provide link to RPubs Url for Data Analytics file here once ready
+
+7. > Lessons learned and possible enhancements
+
+Add more details here post our call/final discussion on Monday
+
