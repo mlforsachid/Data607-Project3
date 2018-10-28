@@ -1,0 +1,59 @@
+---
+title: "Data607-Project3"
+author: "Santosh Manjrekar, Sanchid Deshmukh, Faizan Younus,Robert Lauto"
+date: "October 14, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(RODBC)
+library(RMySQL)
+```
+```{r}
+#cnString <- "SERVER=db4free.net;DATABASE=data607_skill;UID=cuny_user_607;PASSWORD=cuny*2018;OPTION=3;" # live
+#db <- odbcConnect(cnString, case="nochange")
+
+#db <- dbConnect(MySQL(), user='cuny_user_607', password='cuny*2018', dbname='data607_skill',host='db4free.net')
+
+db <- dbConnect(MySQL(), user='root', password='root', dbname='skilldb', host='localhost')
+```
+
+```{r}
+dbListTables(db)
+dbListFields(db,"skill_data")
+```
+```{r}
+df_skilldata = read.csv("indeed_test_result.csv", header = TRUE)
+```
+
+```{r}
+#dbWriteTable(db,"skill_data",df_skilldata, overwrite = TRUE)
+#dbSendQuery(db, "INSERT INTO skill_data
+#(source, base_skill, skill_term, city, radius, indeed_url,jobs_count) 
+#VALUES('test', 'test','test','test',50,'test',10);")
+```
+```{r}
+#df_skilldata
+dbWriteTable(db, "skill_data", df_skilldata, append=TRUE, row.names=FALSE)
+```
+```{r}
+nrow(df_skilldata)
+for(i in 1:nrow(df_skilldata)){
+  my_source = df_skilldata[i,"Source"]
+  my_baseskill = df_skilldata[i,"Source"]
+  my_skilterm = df_skilldata[i,"Source"]
+  my_city = df_skilldata[i,"Source"]
+  my_radius = df_skilldata[i,"Source"]
+  my_indeedurl = df_skilldata[i,"Source"]
+  my_jobscount = df_skilldata[i,"Source"]
+  
+  query1 <- paste("INSERT INTO skill_data(source, base_skill, skill_term, city, radius, indeed_url,jobs_count)VALUES(",
+          "'",trim(my_source) , "'")
+ 
+  print(query1) 
+}
+```
+
