@@ -1,11 +1,11 @@
 ---
 title: "Data-607 Project-3 Final Presentation"
 output:
+  pdf_document: default
   html_document:
     css: ./lab.css
     highlight: pygments
     theme: cerulean
-  pdf_document: default
   word_document: default
 ---
 ##---------------------------------------------------------------------------
@@ -14,51 +14,88 @@ output:
 
 ###**Date :** 10/28/2018
 
-* > [GitHub Location of Web Scrapping file](Git hub URL of Web Scrapping file)
-* > [GitHub Location of Data Analytics file](Git hub url of Data Analytics file)
-* > [GitHub location of Database Transformation file](Git hub url of Database transformation file)
-* > [GitHub location of Final Presentation file](Git hub url of Final Presentation file)
-* > [RPubs Location of Web Scrapping file](RPubs URL of Web Scrapping file)
-* > [RPubs Location of Data Analytics file](RPubs url of Data Analytics file)
-* > [RPubs location of Database Transformation file](RPubs url of Database transformation file)
-* > [RPubs location of Final Presentation file](RPubs url of Final Presentation file)
+* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+* > [GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
+* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+* > [RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
 
 ##---------------------------------------------------------------------------
 
 1. > Approach
 
-Explain overall approach taken here
+All the credit goes to the team work for the success of this project. We went through typical team forming, storming and norming phases while we marched towards accomplishing common goals towards the project submission.
+
+* Team Forming : - While we were late in forming a team, a common force of accomplishing the project achievement brought us all together. Thanks to Sabrina for helping us connecting together.
+
+* Team Storming : - 
+    + Free Rider : Fortunately we didn't have that issue
+    + Loss of resources : We lost two team members in the process
+    + Conflict amongst team members : Eveyone had unique perspective. This was inevitable
+
+* Team Norming : -
+    + Results in common direction : All of us had a common goal in mind to accomplish the project success
+    + More ideas are shared : We were amazed with how much more we can achive while working together
+    + Increased efficiency : Everyone put their best foot forward resulting into increased efficiency
+    + Accountability of weak areas : Everyone realized that one member's weakness can be other's strength. 
 
 
 2. > Team Introduction
 
-* > Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation slide
-* > Santosh Manjrekar : Web scrapping and Data preparation
-* > Robert Lauto : Web Scrapping and Data preparation
-* > Hantz Angrand : Data Analytics and visualization
+* Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation file
+* Santosh Manjrekar : Web scrapping and Data preparation
+* Robert Lauto : Web Scrapping and Data preparation
+* Hantz Angrand : Data Analytics and visualization
 
 3. > Team communication
 
 Team used various modes of commnication while working on the project
 
-1] Slack Channel
-2] Video conference
-3] Email
-4] Git Repo
+* 1] Slack Channel
+* 2] Video conference
+* 3] Email
+* 4] Git Repo
 
 4. > Scrapping data from web
 
-Explain various data sources and pros and cons here
+* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+
+* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
 
 5. > Transofrming and Storing data in database
 
-Explain more about data store and authentication mechanism
+* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+
+* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+
 
 6. > Visualization and analysis
 
-Provide link to RPubs Url for Data Analytics file here once ready
+* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+
+* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
 
 7. > Lessons learned and possible enhancements
 
-Add more details here post our call/final discussion on Monday
+Following are the lesson leanred while working on this project
+
+* Team rocks. You can always deliver more when collaborate
+* Team communication is a key. Need to leverage online tools like Video Conferencing, Slack channel, Emails for being connected
+* Respecting diverse perspective : Best results can be acheved when diverse perspective is valued and respected
+* Data is the most critical asset for any data anaysis work
+* More time is spent in data preparation work (70%) and lesser time on Data Analysitcs work (30%)
+* Time difference challenge. Need to plan conferences suiting everyone's need
+
+
+Future Enhancements
+
+* Gathering more data. Multiple data sources, adding more dimensions.
+* Adding multidimensional analytics with added dimensions like Geo, Regions and Countires
+* Creating comparison charts for Data Science skillsets between various job sites
+* Identify hot regions where Data Science skills are predominant
+* Identify correlation between educational institutions and software companies where Data Science skills are predominant
+
 
