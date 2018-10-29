@@ -54,10 +54,10 @@ All the credit goes to the team work for the success of this project. We went th
 
 Team used various modes of commnication while working on the project
 
-* 1] Slack Channel
-* 2] Video conference
-* 3] Email
-* 4] Git Repo
+* Slack Channel
+* Video conference
+* Email
+* Git Repo
 
 4. > Scrapping data from web
 
