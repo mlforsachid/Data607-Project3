@@ -1,0 +1,42 @@
+---
+title: "Project3_viz"
+author: "Robert Lauto"
+date: "10/28/2018"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(plotly)
+library(ggplot2)
+```
+
+```{r}
+ny_indeed <- read.csv('NY_indeed_results.csv', stringsAsFactors = F)
+ny_indeed <- ny_indeed %>% arrange(desc(ny_indeed$count))
+ny_indeed$key_words <- factor(ny_indeed$key_words, levels = unique(ny_indeed$key_words)[order(ny_indeed$count, decreasing = F)])
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', name = 'Data Science skills in NY') %>% 
+  layout(title='Skills Required of Data Scientists in NY')
+
+key_word_plot
+
+# grouping by type
+grpd <- ny_indeed %>% 
+  group_by(type) %>% 
+  select(type,count) %>% 
+  summarise(sum_by_type = sum(count))
+
+# plotting grouped by type of skill with sum
+grpd$type <- factor(grpd$type, levels = unique(grpd$type)[order(grpd$sum_by_type, decreasing = F)])
+sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h') %>% 
+  layout(title='NY Skills by Type')
+
+sum_by_type  
+```
