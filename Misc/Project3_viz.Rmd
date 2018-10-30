@@ -12,7 +12,8 @@ library(ggplot2)
 ```
 
 ```{r}
-ny_indeed <- read.csv('NY_indeed_results.csv', stringsAsFactors = F)
+setwd('/Users/Rob/Documents/MSDS/DATA 607/data')
+ny_indeed <- read.csv('https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/NY_indeed_results.csv', stringsAsFactors = F)
 ny_indeed <- ny_indeed %>% arrange(desc(ny_indeed$count))
 ny_indeed$key_words <- factor(ny_indeed$key_words, levels = unique(ny_indeed$key_words)[order(ny_indeed$count, decreasing = F)])
 m <- list(
@@ -22,7 +23,7 @@ m <- list(
   t = 100,
   pad = 4
 )
-key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', name = 'Data Science skills in NY') %>% 
+key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', color = ~type) %>% 
   layout(title='Skills Required of Data Scientists in NY')
 
 key_word_plot
@@ -35,7 +36,7 @@ grpd <- ny_indeed %>%
 
 # plotting grouped by type of skill with sum
 grpd$type <- factor(grpd$type, levels = unique(grpd$type)[order(grpd$sum_by_type, decreasing = F)])
-sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h') %>% 
+sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h', color = ~type) %>% 
   layout(title='NY Skills by Type')
 
 sum_by_type  
