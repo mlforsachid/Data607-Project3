@@ -1,6 +1,6 @@
 ---
 title: "Data607-Project3"
-author: "Santosh Manjrekar, Sanchid Deshmukh, Faizan Younus,Robert Lauto"
+author: "Santosh Manjrekar, Sanchid Deshmukh, Hantz Angrand, Robert Lauto"
 date: "October 14, 2018"
 output: html_document
 ---
@@ -16,7 +16,7 @@ When searching indeed.com the resulting URL includes all of the criteria specifi
 library(xml2)
 ```
 
-```{r eval=F}
+```{r eval= F}
 library(XML)
 library(stringr)
 library(knitr)
