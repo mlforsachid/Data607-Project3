@@ -23,7 +23,7 @@ output:
   We reviewed many resources to establish a general idea of values Data Science Skill, resources being(google, indeed.com,monster.com,linkedin.com, cio.com)
   
 * Sourcing : - 
-  The best sources were singled out to be scraped fr detail information
+  The best sources were singled out to be scraped for detail information
   We finalized 3 sources indeed.com, linkedin.com amd Kaggle data source
   
 * Data Transformation and Storage :-
@@ -250,5 +250,3 @@ Future Enhancements:
 * > [RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
 
 ##---------------------------------------------------------------------------
-
-* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
