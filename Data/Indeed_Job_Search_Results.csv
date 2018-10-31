@@ -1,3 +1,301 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e41363ed90d70d4a66f6d980e265986204558144d9cd3498d51639061de2d03
-size 42784
+"Source","Base_Skill","Skill_Term","City","radius","indeed_url","jobs_count"
+"Indeed","Data Scientist","Hadoop","New York,NY","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=New York,NY&radius=50",429
+"Indeed","Data Scientist","Hive","New York,NY","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=New York,NY&radius=50",179
+"Indeed","Data Scientist","Python","New York,NY","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=New York,NY&radius=50",1133
+"Indeed","Data Scientist","R","New York,NY","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=New York,NY&radius=50",678
+"Indeed","Data Scientist","Machine Learning","New York,NY","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=New York,NY&radius=50",904
+"Indeed","Data Scientist","Big Data","New York,NY","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=New York,NY&radius=50",974
+"Indeed","Data Scientist","SAS","New York,NY","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=New York,NY&radius=50",892
+"Indeed","Data Scientist","MapReduce","New York,NY","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=New York,NY&radius=50",48
+"Indeed","Data Scientist","MongoDB","New York,NY","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=New York,NY&radius=50",47
+"Indeed","Data Scientist","NLP","New York,NY","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=New York,NY&radius=50",121
+"Indeed","Data Scientist","Predictive Analysis","New York,NY","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=New York,NY&radius=50",246
+"Indeed","Data Scientist","Data Mining","New York,NY","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=New York,NY&radius=50",295
+"Indeed","Data Scientist","Communication","New York,NY","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=New York,NY&radius=50",1897
+"Indeed","Data Scientist","Neural network","New York,NY","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=New York,NY&radius=50",99
+"Indeed","Data Scientist","Tensorflow","New York,NY","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=New York,NY&radius=50",120
+"Indeed","Data Scientist","Hadoop","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Los Angeles,CA&radius=50",104
+"Indeed","Data Scientist","Hive","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Los Angeles,CA&radius=50",46
+"Indeed","Data Scientist","Python","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Los Angeles,CA&radius=50",383
+"Indeed","Data Scientist","R","Los Angeles,CA","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Los Angeles,CA&radius=50",175
+"Indeed","Data Scientist","Machine Learning","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Los Angeles,CA&radius=50",278
+"Indeed","Data Scientist","Big Data","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Los Angeles,CA&radius=50",293
+"Indeed","Data Scientist","SAS","Los Angeles,CA","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Los Angeles,CA&radius=50",223
+"Indeed","Data Scientist","MapReduce","Los Angeles,CA","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Los Angeles,CA&radius=50",15
+"Indeed","Data Scientist","MongoDB","Los Angeles,CA","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Los Angeles,CA&radius=50",22
+"Indeed","Data Scientist","NLP","Los Angeles,CA","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Los Angeles,CA&radius=50",37
+"Indeed","Data Scientist","Predictive Analysis","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Los Angeles,CA&radius=50",84
+"Indeed","Data Scientist","Data Mining","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Los Angeles,CA&radius=50",74
+"Indeed","Data Scientist","Communication","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Los Angeles,CA&radius=50",737
+"Indeed","Data Scientist","Neural network","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Los Angeles,CA&radius=50",43
+"Indeed","Data Scientist","Tensorflow","Los Angeles,CA","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Los Angeles,CA&radius=50",49
+"Indeed","Data Scientist","Hadoop","Chicago,IL","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Chicago,IL&radius=50",121
+"Indeed","Data Scientist","Hive","Chicago,IL","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Chicago,IL&radius=50",62
+"Indeed","Data Scientist","Python","Chicago,IL","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Chicago,IL&radius=50",371
+"Indeed","Data Scientist","R","Chicago,IL","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Chicago,IL&radius=50",229
+"Indeed","Data Scientist","Machine Learning","Chicago,IL","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Chicago,IL&radius=50",296
+"Indeed","Data Scientist","Big Data","Chicago,IL","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Chicago,IL&radius=50",341
+"Indeed","Data Scientist","SAS","Chicago,IL","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Chicago,IL&radius=50",328
+"Indeed","Data Scientist","MapReduce","Chicago,IL","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Chicago,IL&radius=50",13
+"Indeed","Data Scientist","MongoDB","Chicago,IL","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Chicago,IL&radius=50",15
+"Indeed","Data Scientist","NLP","Chicago,IL","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Chicago,IL&radius=50",33
+"Indeed","Data Scientist","Predictive Analysis","Chicago,IL","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Chicago,IL&radius=50",122
+"Indeed","Data Scientist","Data Mining","Chicago,IL","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Chicago,IL&radius=50",87
+"Indeed","Data Scientist","Communication","Chicago,IL","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Chicago,IL&radius=50",619
+"Indeed","Data Scientist","Neural network","Chicago,IL","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Chicago,IL&radius=50",34
+"Indeed","Data Scientist","Tensorflow","Chicago,IL","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Chicago,IL&radius=50",39
+"Indeed","Data Scientist","Hadoop","Houston,TX","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Houston,TX&radius=50",32
+"Indeed","Data Scientist","Hive","Houston,TX","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Houston,TX&radius=50",13
+"Indeed","Data Scientist","Python","Houston,TX","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Houston,TX&radius=50",84
+"Indeed","Data Scientist","R","Houston,TX","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Houston,TX&radius=50",64
+"Indeed","Data Scientist","Machine Learning","Houston,TX","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Houston,TX&radius=50",72
+"Indeed","Data Scientist","Big Data","Houston,TX","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Houston,TX&radius=50",78
+"Indeed","Data Scientist","SAS","Houston,TX","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Houston,TX&radius=50",68
+"Indeed","Data Scientist","MapReduce","Houston,TX","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Houston,TX&radius=50",5
+"Indeed","Data Scientist","MongoDB","Houston,TX","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Houston,TX&radius=50",3
+"Indeed","Data Scientist","NLP","Houston,TX","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Houston,TX&radius=50",6
+"Indeed","Data Scientist","Predictive Analysis","Houston,TX","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Houston,TX&radius=50",31
+"Indeed","Data Scientist","Data Mining","Houston,TX","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Houston,TX&radius=50",33
+"Indeed","Data Scientist","Communication","Houston,TX","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Houston,TX&radius=50",204
+"Indeed","Data Scientist","Neural network","Houston,TX","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Houston,TX&radius=50",9
+"Indeed","Data Scientist","Tensorflow","Houston,TX","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Houston,TX&radius=50",12
+"Indeed","Data Scientist","Hadoop","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Phoenix,AZ&radius=50",32
+"Indeed","Data Scientist","Hive","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Phoenix,AZ&radius=50",13
+"Indeed","Data Scientist","Python","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Phoenix,AZ&radius=50",69
+"Indeed","Data Scientist","R","Phoenix,AZ","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Phoenix,AZ&radius=50",46
+"Indeed","Data Scientist","Machine Learning","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Phoenix,AZ&radius=50",46
+"Indeed","Data Scientist","Big Data","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Phoenix,AZ&radius=50",70
+"Indeed","Data Scientist","SAS","Phoenix,AZ","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Phoenix,AZ&radius=50",65
+"Indeed","Data Scientist","MapReduce","Phoenix,AZ","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Phoenix,AZ&radius=50",4
+"Indeed","Data Scientist","MongoDB","Phoenix,AZ","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Phoenix,AZ&radius=50",4
+"Indeed","Data Scientist","NLP","Phoenix,AZ","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Phoenix,AZ&radius=50",7
+"Indeed","Data Scientist","Predictive Analysis","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Phoenix,AZ&radius=50",27
+"Indeed","Data Scientist","Data Mining","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Phoenix,AZ&radius=50",20
+"Indeed","Data Scientist","Communication","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Phoenix,AZ&radius=50",120
+"Indeed","Data Scientist","Neural network","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Phoenix,AZ&radius=50",9
+"Indeed","Data Scientist","Tensorflow","Phoenix,AZ","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Phoenix,AZ&radius=50",8
+"Indeed","Data Scientist","Hadoop","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Philadelphia,PA&radius=50",83
+"Indeed","Data Scientist","Hive","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Philadelphia,PA&radius=50",34
+"Indeed","Data Scientist","Python","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Philadelphia,PA&radius=50",217
+"Indeed","Data Scientist","R","Philadelphia,PA","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Philadelphia,PA&radius=50",151
+"Indeed","Data Scientist","Machine Learning","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Philadelphia,PA&radius=50",152
+"Indeed","Data Scientist","Big Data","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Philadelphia,PA&radius=50",211
+"Indeed","Data Scientist","SAS","Philadelphia,PA","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Philadelphia,PA&radius=50",204
+"Indeed","Data Scientist","MapReduce","Philadelphia,PA","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Philadelphia,PA&radius=50",17
+"Indeed","Data Scientist","MongoDB","Philadelphia,PA","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Philadelphia,PA&radius=50",16
+"Indeed","Data Scientist","NLP","Philadelphia,PA","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Philadelphia,PA&radius=50",18
+"Indeed","Data Scientist","Predictive Analysis","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Philadelphia,PA&radius=50",72
+"Indeed","Data Scientist","Data Mining","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Philadelphia,PA&radius=50",70
+"Indeed","Data Scientist","Communication","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Philadelphia,PA&radius=50",664
+"Indeed","Data Scientist","Neural network","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Philadelphia,PA&radius=50",23
+"Indeed","Data Scientist","Tensorflow","Philadelphia,PA","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Philadelphia,PA&radius=50",20
+"Indeed","Data Scientist","Hadoop","San Antonio,TX","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=San Antonio,TX&radius=50",8
+"Indeed","Data Scientist","Hive","San Antonio,TX","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=San Antonio,TX&radius=50",3
+"Indeed","Data Scientist","Python","San Antonio,TX","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=San Antonio,TX&radius=50",38
+"Indeed","Data Scientist","R","San Antonio,TX","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=San Antonio,TX&radius=50",14
+"Indeed","Data Scientist","Machine Learning","San Antonio,TX","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=San Antonio,TX&radius=50",33
+"Indeed","Data Scientist","Big Data","San Antonio,TX","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=San Antonio,TX&radius=50",35
+"Indeed","Data Scientist","SAS","San Antonio,TX","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=San Antonio,TX&radius=50",39
+"Indeed","Data Scientist","MapReduce","San Antonio,TX","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=San Antonio,TX&radius=50",11
+"Indeed","Data Scientist","MongoDB","San Antonio,TX","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=San Antonio,TX&radius=50",7
+"Indeed","Data Scientist","NLP","San Antonio,TX","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=San Antonio,TX&radius=50",
+"Indeed","Data Scientist","Predictive Analysis","San Antonio,TX","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=San Antonio,TX&radius=50",14
+"Indeed","Data Scientist","Data Mining","San Antonio,TX","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=San Antonio,TX&radius=50",6
+"Indeed","Data Scientist","Communication","San Antonio,TX","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=San Antonio,TX&radius=50",63
+"Indeed","Data Scientist","Neural network","San Antonio,TX","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=San Antonio,TX&radius=50",4
+"Indeed","Data Scientist","Tensorflow","San Antonio,TX","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=San Antonio,TX&radius=50",2
+"Indeed","Data Scientist","Hadoop","Dallas,TX","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Dallas,TX&radius=50",76
+"Indeed","Data Scientist","Hive","Dallas,TX","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Dallas,TX&radius=50",34
+"Indeed","Data Scientist","Python","Dallas,TX","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Dallas,TX&radius=50",155
+"Indeed","Data Scientist","R","Dallas,TX","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Dallas,TX&radius=50",104
+"Indeed","Data Scientist","Machine Learning","Dallas,TX","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Dallas,TX&radius=50",149
+"Indeed","Data Scientist","Big Data","Dallas,TX","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Dallas,TX&radius=50",185
+"Indeed","Data Scientist","SAS","Dallas,TX","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Dallas,TX&radius=50",131
+"Indeed","Data Scientist","MapReduce","Dallas,TX","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Dallas,TX&radius=50",8
+"Indeed","Data Scientist","MongoDB","Dallas,TX","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Dallas,TX&radius=50",9
+"Indeed","Data Scientist","NLP","Dallas,TX","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Dallas,TX&radius=50",15
+"Indeed","Data Scientist","Predictive Analysis","Dallas,TX","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Dallas,TX&radius=50",58
+"Indeed","Data Scientist","Data Mining","Dallas,TX","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Dallas,TX&radius=50",65
+"Indeed","Data Scientist","Communication","Dallas,TX","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Dallas,TX&radius=50",265
+"Indeed","Data Scientist","Neural network","Dallas,TX","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Dallas,TX&radius=50",22
+"Indeed","Data Scientist","Tensorflow","Dallas,TX","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Dallas,TX&radius=50",24
+"Indeed","Data Scientist","Hadoop","San Diego,CA","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=San Diego,CA&radius=50",39
+"Indeed","Data Scientist","Hive","San Diego,CA","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=San Diego,CA&radius=50",16
+"Indeed","Data Scientist","Python","San Diego,CA","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=San Diego,CA&radius=50",183
+"Indeed","Data Scientist","R","San Diego,CA","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=San Diego,CA&radius=50",105
+"Indeed","Data Scientist","Machine Learning","San Diego,CA","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=San Diego,CA&radius=50",117
+"Indeed","Data Scientist","Big Data","San Diego,CA","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=San Diego,CA&radius=50",112
+"Indeed","Data Scientist","SAS","San Diego,CA","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=San Diego,CA&radius=50",85
+"Indeed","Data Scientist","MapReduce","San Diego,CA","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=San Diego,CA&radius=50",13
+"Indeed","Data Scientist","MongoDB","San Diego,CA","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=San Diego,CA&radius=50",6
+"Indeed","Data Scientist","NLP","San Diego,CA","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=San Diego,CA&radius=50",4
+"Indeed","Data Scientist","Predictive Analysis","San Diego,CA","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=San Diego,CA&radius=50",40
+"Indeed","Data Scientist","Data Mining","San Diego,CA","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=San Diego,CA&radius=50",46
+"Indeed","Data Scientist","Communication","San Diego,CA","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=San Diego,CA&radius=50",506
+"Indeed","Data Scientist","Neural network","San Diego,CA","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=San Diego,CA&radius=50",32
+"Indeed","Data Scientist","Tensorflow","San Diego,CA","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=San Diego,CA&radius=50",17
+"Indeed","Data Scientist","Hadoop","San Jose,CA","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=San Jose,CA&radius=50",952
+"Indeed","Data Scientist","Hive","San Jose,CA","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=San Jose,CA&radius=50",453
+"Indeed","Data Scientist","Python","San Jose,CA","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=San Jose,CA&radius=50",2337
+"Indeed","Data Scientist","R","San Jose,CA","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=San Jose,CA&radius=50",1056
+"Indeed","Data Scientist","Machine Learning","San Jose,CA","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=San Jose,CA&radius=50",2189
+"Indeed","Data Scientist","Big Data","San Jose,CA","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=San Jose,CA&radius=50",1910
+"Indeed","Data Scientist","SAS","San Jose,CA","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=San Jose,CA&radius=50",1082
+"Indeed","Data Scientist","MapReduce","San Jose,CA","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=San Jose,CA&radius=50",127
+"Indeed","Data Scientist","MongoDB","San Jose,CA","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=San Jose,CA&radius=50",84
+"Indeed","Data Scientist","NLP","San Jose,CA","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=San Jose,CA&radius=50",273
+"Indeed","Data Scientist","Predictive Analysis","San Jose,CA","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=San Jose,CA&radius=50",353
+"Indeed","Data Scientist","Data Mining","San Jose,CA","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=San Jose,CA&radius=50",521
+"Indeed","Data Scientist","Communication","San Jose,CA","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=San Jose,CA&radius=50",2993
+"Indeed","Data Scientist","Neural network","San Jose,CA","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=San Jose,CA&radius=50",225
+"Indeed","Data Scientist","Tensorflow","San Jose,CA","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=San Jose,CA&radius=50",316
+"Indeed","Data Scientist","Hadoop","Detroit,MI","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Detroit,MI&radius=50",42
+"Indeed","Data Scientist","Hive","Detroit,MI","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Detroit,MI&radius=50",12
+"Indeed","Data Scientist","Python","Detroit,MI","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Detroit,MI&radius=50",94
+"Indeed","Data Scientist","R","Detroit,MI","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Detroit,MI&radius=50",55
+"Indeed","Data Scientist","Machine Learning","Detroit,MI","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Detroit,MI&radius=50",50
+"Indeed","Data Scientist","Big Data","Detroit,MI","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Detroit,MI&radius=50",75
+"Indeed","Data Scientist","SAS","Detroit,MI","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Detroit,MI&radius=50",73
+"Indeed","Data Scientist","MapReduce","Detroit,MI","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Detroit,MI&radius=50",4
+"Indeed","Data Scientist","MongoDB","Detroit,MI","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Detroit,MI&radius=50",
+"Indeed","Data Scientist","NLP","Detroit,MI","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Detroit,MI&radius=50",
+"Indeed","Data Scientist","Predictive Analysis","Detroit,MI","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Detroit,MI&radius=50",14
+"Indeed","Data Scientist","Data Mining","Detroit,MI","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Detroit,MI&radius=50",27
+"Indeed","Data Scientist","Communication","Detroit,MI","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Detroit,MI&radius=50",149
+"Indeed","Data Scientist","Neural network","Detroit,MI","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Detroit,MI&radius=50",12
+"Indeed","Data Scientist","Tensorflow","Detroit,MI","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Detroit,MI&radius=50",13
+"Indeed","Data Scientist","Hadoop","San Francisco,CA","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=San Francisco,CA&radius=50",959
+"Indeed","Data Scientist","Hive","San Francisco,CA","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=San Francisco,CA&radius=50",456
+"Indeed","Data Scientist","Python","San Francisco,CA","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=San Francisco,CA&radius=50",2348
+"Indeed","Data Scientist","R","San Francisco,CA","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=San Francisco,CA&radius=50",1067
+"Indeed","Data Scientist","Machine Learning","San Francisco,CA","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=San Francisco,CA&radius=50",2196
+"Indeed","Data Scientist","Big Data","San Francisco,CA","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=San Francisco,CA&radius=50",1918
+"Indeed","Data Scientist","SAS","San Francisco,CA","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=San Francisco,CA&radius=50",1086
+"Indeed","Data Scientist","MapReduce","San Francisco,CA","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=San Francisco,CA&radius=50",127
+"Indeed","Data Scientist","MongoDB","San Francisco,CA","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=San Francisco,CA&radius=50",84
+"Indeed","Data Scientist","NLP","San Francisco,CA","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=San Francisco,CA&radius=50",273
+"Indeed","Data Scientist","Predictive Analysis","San Francisco,CA","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=San Francisco,CA&radius=50",356
+"Indeed","Data Scientist","Data Mining","San Francisco,CA","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=San Francisco,CA&radius=50",525
+"Indeed","Data Scientist","Communication","San Francisco,CA","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=San Francisco,CA&radius=50",3054
+"Indeed","Data Scientist","Neural network","San Francisco,CA","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=San Francisco,CA&radius=50",227
+"Indeed","Data Scientist","Tensorflow","San Francisco,CA","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=San Francisco,CA&radius=50",317
+"Indeed","Data Scientist","Hadoop","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Jacksonville,FL&radius=50",4
+"Indeed","Data Scientist","Hive","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","Python","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Jacksonville,FL&radius=50",15
+"Indeed","Data Scientist","R","Jacksonville,FL","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Jacksonville,FL&radius=50",13
+"Indeed","Data Scientist","Machine Learning","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Jacksonville,FL&radius=50",11
+"Indeed","Data Scientist","Big Data","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Jacksonville,FL&radius=50",12
+"Indeed","Data Scientist","SAS","Jacksonville,FL","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Jacksonville,FL&radius=50",14
+"Indeed","Data Scientist","MapReduce","Jacksonville,FL","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","MongoDB","Jacksonville,FL","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","NLP","Jacksonville,FL","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","Predictive Analysis","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","Data Mining","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Jacksonville,FL&radius=50",5
+"Indeed","Data Scientist","Communication","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Jacksonville,FL&radius=50",22
+"Indeed","Data Scientist","Neural network","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","Tensorflow","Jacksonville,FL","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Jacksonville,FL&radius=50",
+"Indeed","Data Scientist","Hadoop","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Indianapolis,IN&radius=50",9
+"Indeed","Data Scientist","Hive","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Indianapolis,IN&radius=50",4
+"Indeed","Data Scientist","Python","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Indianapolis,IN&radius=50",29
+"Indeed","Data Scientist","R","Indianapolis,IN","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Indianapolis,IN&radius=50",28
+"Indeed","Data Scientist","Machine Learning","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Indianapolis,IN&radius=50",33
+"Indeed","Data Scientist","Big Data","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Indianapolis,IN&radius=50",38
+"Indeed","Data Scientist","SAS","Indianapolis,IN","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Indianapolis,IN&radius=50",32
+"Indeed","Data Scientist","MapReduce","Indianapolis,IN","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Indianapolis,IN&radius=50",3
+"Indeed","Data Scientist","MongoDB","Indianapolis,IN","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Indianapolis,IN&radius=50",2
+"Indeed","Data Scientist","NLP","Indianapolis,IN","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Indianapolis,IN&radius=50",2
+"Indeed","Data Scientist","Predictive Analysis","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Indianapolis,IN&radius=50",9
+"Indeed","Data Scientist","Data Mining","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Indianapolis,IN&radius=50",15
+"Indeed","Data Scientist","Communication","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Indianapolis,IN&radius=50",90
+"Indeed","Data Scientist","Neural network","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Indianapolis,IN&radius=50",2
+"Indeed","Data Scientist","Tensorflow","Indianapolis,IN","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Indianapolis,IN&radius=50",4
+"Indeed","Data Scientist","Hadoop","Austin,TX","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Austin,TX&radius=50",83
+"Indeed","Data Scientist","Hive","Austin,TX","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Austin,TX&radius=50",26
+"Indeed","Data Scientist","Python","Austin,TX","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Austin,TX&radius=50",166
+"Indeed","Data Scientist","R","Austin,TX","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Austin,TX&radius=50",85
+"Indeed","Data Scientist","Machine Learning","Austin,TX","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Austin,TX&radius=50",139
+"Indeed","Data Scientist","Big Data","Austin,TX","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Austin,TX&radius=50",145
+"Indeed","Data Scientist","SAS","Austin,TX","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Austin,TX&radius=50",73
+"Indeed","Data Scientist","MapReduce","Austin,TX","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Austin,TX&radius=50",14
+"Indeed","Data Scientist","MongoDB","Austin,TX","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Austin,TX&radius=50",14
+"Indeed","Data Scientist","NLP","Austin,TX","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Austin,TX&radius=50",17
+"Indeed","Data Scientist","Predictive Analysis","Austin,TX","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Austin,TX&radius=50",35
+"Indeed","Data Scientist","Data Mining","Austin,TX","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Austin,TX&radius=50",49
+"Indeed","Data Scientist","Communication","Austin,TX","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Austin,TX&radius=50",175
+"Indeed","Data Scientist","Neural network","Austin,TX","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Austin,TX&radius=50",17
+"Indeed","Data Scientist","Tensorflow","Austin,TX","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Austin,TX&radius=50",21
+"Indeed","Data Scientist","Hadoop","Columbus,OH","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Columbus,OH&radius=50",18
+"Indeed","Data Scientist","Hive","Columbus,OH","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Columbus,OH&radius=50",2
+"Indeed","Data Scientist","Python","Columbus,OH","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Columbus,OH&radius=50",51
+"Indeed","Data Scientist","R","Columbus,OH","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Columbus,OH&radius=50",36
+"Indeed","Data Scientist","Machine Learning","Columbus,OH","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Columbus,OH&radius=50",30
+"Indeed","Data Scientist","Big Data","Columbus,OH","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Columbus,OH&radius=50",39
+"Indeed","Data Scientist","SAS","Columbus,OH","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Columbus,OH&radius=50",36
+"Indeed","Data Scientist","MapReduce","Columbus,OH","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Columbus,OH&radius=50",
+"Indeed","Data Scientist","MongoDB","Columbus,OH","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Columbus,OH&radius=50",6
+"Indeed","Data Scientist","NLP","Columbus,OH","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Columbus,OH&radius=50",
+"Indeed","Data Scientist","Predictive Analysis","Columbus,OH","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Columbus,OH&radius=50",12
+"Indeed","Data Scientist","Data Mining","Columbus,OH","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Columbus,OH&radius=50",8
+"Indeed","Data Scientist","Communication","Columbus,OH","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Columbus,OH&radius=50",118
+"Indeed","Data Scientist","Neural network","Columbus,OH","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Columbus,OH&radius=50",6
+"Indeed","Data Scientist","Tensorflow","Columbus,OH","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Columbus,OH&radius=50",7
+"Indeed","Data Scientist","Hadoop","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Fort Worth,TX&radius=50",76
+"Indeed","Data Scientist","Hive","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Fort Worth,TX&radius=50",34
+"Indeed","Data Scientist","Python","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Fort Worth,TX&radius=50",153
+"Indeed","Data Scientist","R","Fort Worth,TX","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Fort Worth,TX&radius=50",103
+"Indeed","Data Scientist","Machine Learning","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Fort Worth,TX&radius=50",147
+"Indeed","Data Scientist","Big Data","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Fort Worth,TX&radius=50",184
+"Indeed","Data Scientist","SAS","Fort Worth,TX","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Fort Worth,TX&radius=50",130
+"Indeed","Data Scientist","MapReduce","Fort Worth,TX","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Fort Worth,TX&radius=50",8
+"Indeed","Data Scientist","MongoDB","Fort Worth,TX","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Fort Worth,TX&radius=50",9
+"Indeed","Data Scientist","NLP","Fort Worth,TX","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Fort Worth,TX&radius=50",15
+"Indeed","Data Scientist","Predictive Analysis","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Fort Worth,TX&radius=50",57
+"Indeed","Data Scientist","Data Mining","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Fort Worth,TX&radius=50",64
+"Indeed","Data Scientist","Communication","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Fort Worth,TX&radius=50",262
+"Indeed","Data Scientist","Neural network","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Fort Worth,TX&radius=50",22
+"Indeed","Data Scientist","Tensorflow","Fort Worth,TX","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Fort Worth,TX&radius=50",24
+"Indeed","Data Scientist","Hadoop","Charlotte,NC","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Charlotte,NC&radius=50",50
+"Indeed","Data Scientist","Hive","Charlotte,NC","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Charlotte,NC&radius=50",25
+"Indeed","Data Scientist","Python","Charlotte,NC","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Charlotte,NC&radius=50",107
+"Indeed","Data Scientist","R","Charlotte,NC","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Charlotte,NC&radius=50",75
+"Indeed","Data Scientist","Machine Learning","Charlotte,NC","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Charlotte,NC&radius=50",80
+"Indeed","Data Scientist","Big Data","Charlotte,NC","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Charlotte,NC&radius=50",101
+"Indeed","Data Scientist","SAS","Charlotte,NC","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Charlotte,NC&radius=50",110
+"Indeed","Data Scientist","MapReduce","Charlotte,NC","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Charlotte,NC&radius=50",6
+"Indeed","Data Scientist","MongoDB","Charlotte,NC","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Charlotte,NC&radius=50",2
+"Indeed","Data Scientist","NLP","Charlotte,NC","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Charlotte,NC&radius=50",23
+"Indeed","Data Scientist","Predictive Analysis","Charlotte,NC","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Charlotte,NC&radius=50",33
+"Indeed","Data Scientist","Data Mining","Charlotte,NC","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Charlotte,NC&radius=50",37
+"Indeed","Data Scientist","Communication","Charlotte,NC","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Charlotte,NC&radius=50",127
+"Indeed","Data Scientist","Neural network","Charlotte,NC","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Charlotte,NC&radius=50",13
+"Indeed","Data Scientist","Tensorflow","Charlotte,NC","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Charlotte,NC&radius=50",11
+"Indeed","Data Scientist","Hadoop","Memphis,TN","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Memphis,TN&radius=50",3
+"Indeed","Data Scientist","Hive","Memphis,TN","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","Python","Memphis,TN","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Memphis,TN&radius=50",12
+"Indeed","Data Scientist","R","Memphis,TN","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Memphis,TN&radius=50",11
+"Indeed","Data Scientist","Machine Learning","Memphis,TN","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Memphis,TN&radius=50",7
+"Indeed","Data Scientist","Big Data","Memphis,TN","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Memphis,TN&radius=50",12
+"Indeed","Data Scientist","SAS","Memphis,TN","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Memphis,TN&radius=50",14
+"Indeed","Data Scientist","MapReduce","Memphis,TN","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","MongoDB","Memphis,TN","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","NLP","Memphis,TN","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","Predictive Analysis","Memphis,TN","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Memphis,TN&radius=50",7
+"Indeed","Data Scientist","Data Mining","Memphis,TN","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Memphis,TN&radius=50",5
+"Indeed","Data Scientist","Communication","Memphis,TN","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Memphis,TN&radius=50",16
+"Indeed","Data Scientist","Neural network","Memphis,TN","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","Tensorflow","Memphis,TN","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Memphis,TN&radius=50",
+"Indeed","Data Scientist","Hadoop","Baltimore,MD","50","http://www.indeed.com/jobs?q=Hadoop+Data Scientist&l=Baltimore,MD&radius=50",387
+"Indeed","Data Scientist","Hive","Baltimore,MD","50","http://www.indeed.com/jobs?q=Hive+Data Scientist&l=Baltimore,MD&radius=50",121
+"Indeed","Data Scientist","Python","Baltimore,MD","50","http://www.indeed.com/jobs?q=Python+Data Scientist&l=Baltimore,MD&radius=50",941
+"Indeed","Data Scientist","R","Baltimore,MD","50","http://www.indeed.com/jobs?q=R+Data Scientist&l=Baltimore,MD&radius=50",529
+"Indeed","Data Scientist","Machine Learning","Baltimore,MD","50","http://www.indeed.com/jobs?q=Machine Learning+Data Scientist&l=Baltimore,MD&radius=50",711
+"Indeed","Data Scientist","Big Data","Baltimore,MD","50","http://www.indeed.com/jobs?q=Big Data+Data Scientist&l=Baltimore,MD&radius=50",951
+"Indeed","Data Scientist","SAS","Baltimore,MD","50","http://www.indeed.com/jobs?q=SAS+Data Scientist&l=Baltimore,MD&radius=50",791
+"Indeed","Data Scientist","MapReduce","Baltimore,MD","50","http://www.indeed.com/jobs?q=MapReduce+Data Scientist&l=Baltimore,MD&radius=50",99
+"Indeed","Data Scientist","MongoDB","Baltimore,MD","50","http://www.indeed.com/jobs?q=MongoDB+Data Scientist&l=Baltimore,MD&radius=50",90
+"Indeed","Data Scientist","NLP","Baltimore,MD","50","http://www.indeed.com/jobs?q=NLP+Data Scientist&l=Baltimore,MD&radius=50",84
+"Indeed","Data Scientist","Predictive Analysis","Baltimore,MD","50","http://www.indeed.com/jobs?q=Predictive Analysis+Data Scientist&l=Baltimore,MD&radius=50",280
+"Indeed","Data Scientist","Data Mining","Baltimore,MD","50","http://www.indeed.com/jobs?q=Data Mining+Data Scientist&l=Baltimore,MD&radius=50",310
+"Indeed","Data Scientist","Communication","Baltimore,MD","50","http://www.indeed.com/jobs?q=Communication+Data Scientist&l=Baltimore,MD&radius=50",1534
+"Indeed","Data Scientist","Neural network","Baltimore,MD","50","http://www.indeed.com/jobs?q=Neural network+Data Scientist&l=Baltimore,MD&radius=50",81
+"Indeed","Data Scientist","Tensorflow","Baltimore,MD","50","http://www.indeed.com/jobs?q=Tensorflow+Data Scientist&l=Baltimore,MD&radius=50",97
