@@ -1,31 +1,45 @@
 ---
 title: "Data-607 Project-3 Final Presentation"
 output:
-  pdf_document: default
   html_document:
     css: ./lab.css
     highlight: pygments
     theme: cerulean
+  pdf_document: default
   word_document: default
 ---
 ##---------------------------------------------------------------------------
 
-###**Author Names :** Sachid Deshmukh, Robert Lauto, Santosh Manjrekar, Hantz Angrand
+###**Author Names :** 
+####Sachid Deshmukh 
+####Robert Lauto 
+####Santosh Manjrekar 
+####Hantz Angrand
 
-###**Date :** 10/28/2018
-
-* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
-* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
-* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
-* > [GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
-* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
-* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
-* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
-* > [RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
-
-##---------------------------------------------------------------------------
 
 1. > Approach
+
+* Literature Review : -
+  We reviewed many resources to establish a general idea of values Data Science Skill, resources being(google, indeed.com,monster.com,linkedin.com, cio.com)
+  
+* Sourcing : - 
+  The best sources were singled out to be scraped fr detail information
+  We finalized 3 sources indeed.com, linkedin.com amd Kaggle data source
+  
+* Data Transformation and Storage :-
+  Data scraped from the website was transofrmed and stored in the mysql database
+  We tried to store the data on cloud mysql database (db4free.net)
+
+* Visualization :-
+  Detailed results were converted to a meaningful, understandable graphs.
+
+
+2. > Team Introduction
+
+* Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation file
+* Santosh Manjrekar : Web scrapping and Data preparation
+* Robert Lauto : Web Scrapping and Data preparation
+* Hantz Angrand : Data Analytics and visualization
 
 All the credit goes to the team work for the success of this project. We went through typical team forming, storming and norming phases while we marched towards accomplishing common goals towards the project submission.
 
@@ -43,33 +57,40 @@ All the credit goes to the team work for the success of this project. We went th
     + Accountability of weak areas : Everyone realized that one member's weakness can be other's strength. 
 
 
-2. > Team Introduction
-
-* Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation file
-* Santosh Manjrekar : Web scrapping and Data preparation
-* Robert Lauto : Web Scrapping and Data preparation
-* Hantz Angrand : Data Analytics and visualization
-
 3. > Team communication
 
 Team used various modes of commnication while working on the project
 
-* Slack Channel
-* Video conference
-* Email
-* Git Repo
+* Slack Channel - Effective in sending quick messages, scheduling team mettings
+* Webex conference - It was useful for brianstorming ideas.
+* Email - Useful for sharing information, code
+* Git Repo - Useful for code sharing
 
 4. > Scrapping data from web
 
-* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+For our project we set out to find an answer to the question: Which are the most valued data science skills? We began by searching for data sources, exploring multiple different options.We thought of searching the job website with various data scientist skills and tried
+to gather number of jobs associated with each skill. More the jobs associated with the skill, more important that data science skill is.
 
-* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+We foud out the way to scrap indeed.com data with set of data science skills. We looked into scraping linked.com site programmatically, but webapi provided by linkedin is very restrictive to achieve our goal. We looked at one dataset at kaggle.com that had over 20,000 job postings had only 8 postings with a title containing 'Data Scientist' or 'Data Science'.We settled on using indeed.com as our data source and approached scrapping the data in two different ways.
 
-5. > Transofrming and Storing data in database
+### Approach 1 to scraping indeed.com
+When searching indeed.com the resulting URL includes all of the criteria specified in your search. This approach concatentates search result URLs with different specifications. We combined a skill we were interested in with the term 'data scientist', specified the city of interest, and the radius of 50 miles. We then iterated through the URLs we created and collected the number of job postings (count) for each different search.
 
-* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+### Approach 2 to scraping indeed.com
+For our second approach we decided focus in on one location, New York, NY. We also approached scraping indeed slightly differently. Instead of changing the parameters of the search result URL, we kept the parameters the same, searching only for 'data scientist' in New York, NY. The search result page displays 10 results per page so we created URLs for each sequential page of the search results by increasing the 'start' parameter by 10.
 
-* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+
+[Web Scrapping Code](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+
+
+5. > Storing data in database
+
+After the data scraping data was initially stored in the csv file and then later loaded into mysql database.
+Initial idea was to load the data in cloud database (db4free.net). But we faced some issues with the mysql version hosted on this
+cloud and ended up storing data in local database. We kept the flexibility of reading data from local csv file as well as database.
+
+
+[Storing data in database - code](http://rpubs.com/santoshmanjrekar/434339)
 
 
 6. > Visualization and analysis
@@ -99,3 +120,17 @@ Future Enhancements
 * Identify correlation between educational institutions and software companies where Data Science skills are predominant
 
 
+###**Date :** 10/28/2018
+
+* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+* > [GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
+* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+* > [RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
+
+##---------------------------------------------------------------------------
+
+* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
