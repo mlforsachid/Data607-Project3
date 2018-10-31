@@ -1,0 +1,257 @@
+---
+title: "Data-607 Project-3 Final Presentation"
+output:
+  html_document:
+    css: ./lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+  word_document: default
+---
+##---------------------------------------------------------------------------
+###**Date :** 10/31/2018
+
+###**Author Names :** 
+####Sachid Deshmukh 
+####Robert Lauto 
+####Santosh Manjrekar 
+####Hantz Angrand
+
+
+1. > Approach
+
+* Literature Review : -
+  We reviewed many resources to establish a general idea of values Data Science Skill, resources being(google, indeed.com,monster.com,linkedin.com, cio.com)
+  
+* Sourcing : - 
+  The best sources were singled out to be scraped fr detail information
+  We finalized 3 sources indeed.com, linkedin.com amd Kaggle data source
+  
+* Data Transformation and Storage :-
+  Data scraped from the website was transofrmed and stored in the mysql database
+  We tried to store the data on cloud mysql database (db4free.net)
+
+* Visualization :-
+  Detailed results were converted to a meaningful, understandable graphs.
+
+
+2. > Team Introduction
+
+* Sachid Deshmukh : Facilitated Git Hub collaboaration and prepared final presentation file
+* Santosh Manjrekar : Web scrapping and Data preparation
+* Robert Lauto : Web Scrapping and Data preparation
+* Hantz Angrand : Data Analytics and visualization
+
+All the credit goes to the team work for the success of this project. We went through typical team forming, storming and norming phases while we marched towards accomplishing common goals towards the project submission.
+
+* Team Forming : - While we were late in forming a team, a common force of accomplishing the project achievement brought us all together. Thanks to Sabrina for helping us connecting together.
+
+* Team Storming : - 
+    + Free Rider : Fortunately we didn't have that issue
+    + Loss of resources : We lost two team members in the process
+    + Conflict amongst team members : Eveyone had unique perspective. This was inevitable
+
+* Team Norming : -
+    + Results in common direction : All of us had a common goal in mind to accomplish the project success
+    + More ideas are shared : We were amazed with how much more we can achive while working together
+    + Increased efficiency : Everyone put their best foot forward resulting into increased efficiency
+    + Accountability of weak areas : Everyone realized that one member's weakness can be other's strength. 
+
+
+3. > Team communication
+
+Team used various modes of commnication while working on the project
+
+* Slack Channel - Effective in sending quick messages, scheduling team mettings
+* Webex conference - It was useful for brianstorming ideas.
+* Email - Useful for sharing information, code
+* Git Repo - Useful for code sharing
+
+4. > Scrapping data from web
+
+For our project we set out to find an answer to the question: Which are the most valued data science skills? We began by searching for data sources, exploring multiple different options.We thought of searching the job website with various data scientist skills and tried
+to gather number of jobs associated with each skill. More the jobs associated with the skill, more important that data science skill is.
+
+We foud out the way to scrap indeed.com data with set of data science skills. We looked into scraping linked.com site programmatically, but webapi provided by linkedin is very restrictive to achieve our goal. We looked at one dataset at kaggle.com that had over 20,000 job postings had only 8 postings with a title containing 'Data Scientist' or 'Data Science'.We settled on using indeed.com as our data source and approached scrapping the data in two different ways.
+
+### Approach 1 to scraping indeed.com
+When searching indeed.com the resulting URL includes all of the criteria specified in your search. This approach concatentates search result URLs with different specifications. We combined a skill we were interested in with the term 'data scientist', specified the city of interest, and the radius of 50 miles. We then iterated through the URLs we created and collected the number of job postings (count) for each different search.
+
+### Approach 2 to scraping indeed.com
+For our second approach we decided focus in on one location, New York, NY. We also approached scraping indeed slightly differently. Instead of changing the parameters of the search result URL, we kept the parameters the same, searching only for 'data scientist' in New York, NY. The search result page displays 10 results per page so we created URLs for each sequential page of the search results by increasing the 'start' parameter by 10.
+
+
+[Web Scrapping Code](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+
+
+5. > Storing data in database
+
+After the data scraping data was initially stored in the csv file and then later loaded into mysql database.
+Initial idea was to load the data in cloud database (db4free.net). But we faced some issues with the mysql version hosted on this
+cloud and ended up storing data in local database. We kept the flexibility of reading data from local csv file as well as database.
+
+
+[Storing data in database - code](http://rpubs.com/santoshmanjrekar/434339)
+
+
+6. > Visualization and analysis
+
+```{r include = F}
+library(plyr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(plotly)
+library(RColorBrewer)
+library(wordcloud)
+```
+
+
+```{r include = F}
+indeed_url<-url('https://raw.githubusercontent.com/mlforsachid/Data607-Project3/master/Data/Indeed_Job_Search_Results.csv')
+#indeed_url<-url('Indeed_Job_Search_Results.csv')
+
+read_indeed_url<-read.csv(indeed_url,header = TRUE, stringsAsFactors = TRUE, sep = ',')
+head(read_indeed_url)
+ny_indeed <- read.csv('https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/NY_indeed_results.csv', stringsAsFactors = F)
+ny_indeed
+```
+
+
+
+```{r include = F}
+read_indeed_url<-read_indeed_url[,-5]
+head(read_indeed_url)
+```
+
+```{r include = F}
+names(read_indeed_url)<-c('Source', 'Job Title','Skills','City','url','Count')
+head(read_indeed_url)
+```
+
+```{r include = F}
+read_indeed_url<-na.omit(read_indeed_url)
+head(read_indeed_url)
+```
+
+```{r include = F}
+ny_indeed <- ny_indeed %>% arrange(desc(ny_indeed$count))
+```
+
+```{r include = T}
+indeed_skillaggr<-aggregate(read_indeed_url$Count,by=list(Category=read_indeed_url$Skills), FUN=sum)
+indeed_skillaggr
+```
+
+```{r include = F}
+skills_count<-read_indeed_url %>%
+  group_by(Skills) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+skills_count
+```
+
+```{r include = F}
+skills_city<-read_indeed_url %>%
+  group_by(Skills,City) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+skills_city
+```
+
+```{r include = F}
+grpd <- ny_indeed %>% 
+  group_by(type) %>% 
+  select(type,count) %>% 
+  summarise(sum_by_type = sum(count))
+```
+
+```{r}
+plots_top<-tail(skills_count,15)
+darkcols <- brewer.pal(8,"Dark2")
+names <- plots_top$Skills
+barplot(plots_top$Total,main="Indeed Skill Demand", horiz=TRUE, names.arg=names, las=1, col=darkcols, cex.axis=0.5, cex.names = 0.5)
+```
+
+```{r}
+top10_skills<-skills_city[1:10,]
+ggplot(top10_skills, aes(x=Skills, y=Total, colour= City, size = Total)) + ggtitle("Citywise Skill Demand")+geom_point()
+```
+
+```{r}
+library(wordcloud)
+wordcloud(skills_count$Skills,skills_count$Total, random.order=FALSE, colors=brewer.pal(8,"Dark2"))
+```
+
+###Drilling down on the Data Scientist jobs in NY. Lets look at a horizontal bar chart of all skills with type indicated by the bar's color.
+```{r}
+ny_indeed$key_words <- factor(ny_indeed$key_words, levels = unique(ny_indeed$key_words)[order(ny_indeed$count, decreasing = F)])
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', color = ~type) %>% 
+  layout(title='Skills Required of Data Scientists in NY')
+key_word_plot
+```
+Now lets look at which type of skill was mentioned the most in job descriptions by plotting the aggregated data.
+```{r}
+grpd$type <- factor(grpd$type, levels = unique(grpd$type)[order(grpd$sum_by_type, decreasing = F)])
+sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h', color = ~type) %>% 
+  layout(title='NY Skills by Type')
+sum_by_type  
+```
+
+[RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+
+7. > Conclusions, lessons learned and possible enhancements
+
+Conclusion:  
+  
+Our findings show that many skills are required of a Data Scientist. We learned that some of the top hard skills required are Python, Machine Learning, Big Data, SQL, Excel, and R. As for soft skills, a Data Scientist is expected to communicate and have managerial experience. Mathemetics or math was also the most frequently mentioned key word in all of NY Data Scientist job postings. However, from  our NY data we cannot definitively conclude whether one type of skill is significantly more important than another. Even though we have counted more mentions of hard skills than soft or education requirements, our search included more key words for hard skills than either of the other types, so this result should be expected. Most importantly, we learned that a Data Scientist is required to be well rounded, with a strong higher education and both soft and hard skills to ensure they can get the job done.  
+  
+Following are the lesson leanred while working on this project:
+
+* Teamwork rocks. You can always deliver more when you collaborate
+* Team communication is a key. Need to leverage online tools like Video Conferencing, Slack channel, Emails for being connected
+* Respecting diverse perspective : Best results can be acheved when diverse perspective is valued and respected
+* Data is the most critical asset for any data anaysis work
+* More time is spent in data preparation work (70%) and lesser time on Data Analysitcs work (30%)
+* Adopt agile or flexible development strategy and have plan B ready. In our case cloud DB didn't work,we had to switch to local mysql.
+* Time difference challenge. Need to plan conferences suiting everyone's need
+
+
+Future Enhancements:
+
+* Gathering more data. Multiple data sources, adding more dimensions.
+* Adding multidimensional analytics with added dimensions like Geo, Regions and Countires
+* Creating comparison charts for Data Science skillsets between various job sites
+* Identify hot regions where Data Science skills are predominant
+* Identify correlation between educational institutions and software companies where Data Science skills are predominant
+
+
+###Following are the URLs for the source code generated during this project.
+
+[GitHub Location of Web Scrappingfile](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+
+[GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+
+[GitHub location of Database Transformationfile](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+
+[GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+
+[GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
+
+[RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+
+[RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+
+[RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+
+[RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
+
+
+##---------------------------------------------------------------------------
