@@ -221,7 +221,7 @@ Our findings show that many skills are required of a Data Scientist. We learned 
   
 Following are the lesson leanred while working on this project:
 
-* Team rocks. You can always deliver more when collaborate
+* Teamwork rocks. You can always deliver more when you collaborate
 * Team communication is a key. Need to leverage online tools like Video Conferencing, Slack channel, Emails for being connected
 * Respecting diverse perspective : Best results can be acheved when diverse perspective is valued and respected
 * Data is the most critical asset for any data anaysis work
