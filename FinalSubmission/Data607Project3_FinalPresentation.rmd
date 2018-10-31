@@ -9,6 +9,7 @@ output:
   word_document: default
 ---
 ##---------------------------------------------------------------------------
+###**Date :** 10/31/2018
 
 ###**Author Names :** 
 ####Sachid Deshmukh 
@@ -23,7 +24,7 @@ output:
   We reviewed many resources to establish a general idea of values Data Science Skill, resources being(google, indeed.com,monster.com,linkedin.com, cio.com)
   
 * Sourcing : - 
-  The best sources were singled out to be scraped for detail information
+  The best sources were singled out to be scraped fr detail information
   We finalized 3 sources indeed.com, linkedin.com amd Kaggle data source
   
 * Data Transformation and Storage :-
@@ -107,10 +108,11 @@ library(wordcloud)
 
 
 ```{r include = F}
-indeed_url<-url('https://raw.githubusercontent.com/mlforsachid/Data607-Project3/master/Data/Indeed_Job_Search_Results.csv')
+indeed_url<-'D:/MSDS/Data607-Project3/Data/Indeed_Job_Search_Results.csv'
+#indeed_url<-url('Indeed_Job_Search_Results.csv')
+
 read_indeed_url<-read.csv(indeed_url,header = TRUE, stringsAsFactors = TRUE, sep = ',')
 head(read_indeed_url)
-
 ny_indeed <- read.csv('https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/NY_indeed_results.csv', stringsAsFactors = F)
 ny_indeed
 ```
@@ -118,10 +120,8 @@ ny_indeed
 
 
 ```{r include = F}
-
 read_indeed_url<-read_indeed_url[,-5]
 head(read_indeed_url)
-
 ```
 
 ```{r include = F}
@@ -138,7 +138,7 @@ head(read_indeed_url)
 ny_indeed <- ny_indeed %>% arrange(desc(ny_indeed$count))
 ```
 
-```{r include = F}
+```{r include = T}
 indeed_skillaggr<-aggregate(read_indeed_url$Count,by=list(Category=read_indeed_url$Skills), FUN=sum)
 indeed_skillaggr
 ```
@@ -148,7 +148,6 @@ skills_count<-read_indeed_url %>%
   group_by(Skills) %>%
   summarise(Total=sum(Count)) %>%
   arrange(desc(Total))
-
 skills_count
 ```
 
@@ -157,7 +156,6 @@ skills_city<-read_indeed_url %>%
   group_by(Skills,City) %>%
   summarise(Total=sum(Count)) %>%
   arrange(desc(Total))
-
 skills_city
 ```
 
@@ -169,25 +167,23 @@ grpd <- ny_indeed %>%
 ```
 
 ```{r}
-plots_top<-tail(skills_count,10)
-
+plots_top<-tail(skills_count,15)
 darkcols <- brewer.pal(8,"Dark2")
 names <- plots_top$Skills
-barplot(plots_top$Total,main="Indeed Counts", horiz=TRUE, names.arg=names, las=1, col=darkcols, cex.axis=0.5, cex.names = 0.5)
+barplot(plots_top$Total,main="Indeed Skill Demand", horiz=TRUE, names.arg=names, las=1, col=darkcols, cex.axis=0.5, cex.names = 0.5)
 ```
 
 ```{r}
 top10_skills<-skills_city[1:10,]
-ggplot(top10_skills, aes(x=Skills, y=Total, colour= City, size = Total)) + geom_point()
+ggplot(top10_skills, aes(x=Skills, y=Total, colour= City, size = Total)) + ggtitle("Citywise Skill Demand")+geom_point()
 ```
 
 ```{r}
-
 library(wordcloud)
 wordcloud(skills_count$Skills,skills_count$Total, random.order=FALSE, colors=brewer.pal(8,"Dark2"))
 ```
 
-Drilling down on the Data Scientist jobs in NY. Lets look at a horizontal bar chart of all skills with type indicated by the bar's color.
+###Drilling down on the Data Scientist jobs in NY. Lets look at a horizontal bar chart of all skills with type indicated by the bar's color.
 ```{r}
 ny_indeed$key_words <- factor(ny_indeed$key_words, levels = unique(ny_indeed$key_words)[order(ny_indeed$count, decreasing = F)])
 m <- list(
@@ -199,7 +195,6 @@ m <- list(
 )
 key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', color = ~type) %>% 
   layout(title='Skills Required of Data Scientists in NY')
-
 key_word_plot
 ```
 Now lets look at which type of skill was mentioned the most in job descriptions by plotting the aggregated data.
@@ -207,11 +202,10 @@ Now lets look at which type of skill was mentioned the most in job descriptions 
 grpd$type <- factor(grpd$type, levels = unique(grpd$type)[order(grpd$sum_by_type, decreasing = F)])
 sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h', color = ~type) %>% 
   layout(title='NY Skills by Type')
-
 sum_by_type  
 ```
 
-* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+[RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
 
 7. > Conclusions, lessons learned and possible enhancements
 
@@ -226,6 +220,7 @@ Following are the lesson leanred while working on this project:
 * Respecting diverse perspective : Best results can be acheved when diverse perspective is valued and respected
 * Data is the most critical asset for any data anaysis work
 * More time is spent in data preparation work (70%) and lesser time on Data Analysitcs work (30%)
+* Adopt agile or flexible development strategy and have plan B ready. In our case cloud DB didn't work,we had to switch to local mysql.
 * Time difference challenge. Need to plan conferences suiting everyone's need
 
 
@@ -238,15 +233,25 @@ Future Enhancements:
 * Identify correlation between educational institutions and software companies where Data Science skills are predominant
 
 
-###**Date :** 10/28/2018
+###Following are the URLs for the source code generated during this project.
 
-* > [GitHub Location of Web Scrapping file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
-* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
-* > [GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
-* > [GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
-* > [RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
-* > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
-* > [RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
-* > [RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
+[GitHub Location of Web Scrappingfile](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/project3_web_scraping.Rmd)
+
+[GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+
+[GitHub location of Database Transformationfile](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+
+[GitHub location of Database Transformation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607-project3-storedata.RMD)
+
+[GitHub location of Final Presentation file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data607Project3_FinalPresentation.rmd)
+
+[RPubs Location of Web Scrapping file](http://rpubs.com/rlauto/DATA607_project3_web_scraping)
+
+[RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
+
+[RPubs location of Database Transformation file](http://rpubs.com/santoshmanjrekar/434339)
+
+[RPubs location of Final Presentation file](http://rpubs.com/sachid/Data607-Project3-FinalPresentation)
+
 
 ##---------------------------------------------------------------------------
