@@ -95,13 +95,131 @@ cloud and ended up storing data in local database. We kept the flexibility of re
 
 6. > Visualization and analysis
 
-* > [GitHub Location of Data Analytics file](https://github.com/mlforsachid/Data607-Project3/blob/master/FinalSubmission/Data_607_Analytics.Rmd)
+```{r include = F}
+library(plyr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(plotly)
+library(RColorBrewer)
+library(wordcloud)
+```
+
+
+```{r include = F}
+indeed_url<-url('https://raw.githubusercontent.com/mlforsachid/Data607-Project3/master/Data/Indeed_Job_Search_Results.csv')
+read_indeed_url<-read.csv(indeed_url,header = TRUE, stringsAsFactors = TRUE, sep = ',')
+head(read_indeed_url)
+
+ny_indeed <- read.csv('https://media.githubusercontent.com/media/mlforsachid/Data607-Project3/master/Data/NY_indeed_results.csv', stringsAsFactors = F)
+ny_indeed
+```
+
+
+
+```{r include = F}
+
+read_indeed_url<-read_indeed_url[,-5]
+head(read_indeed_url)
+
+```
+
+```{r include = F}
+names(read_indeed_url)<-c('Source', 'Job Title','Skills','City','url','Count')
+head(read_indeed_url)
+```
+
+```{r include = F}
+read_indeed_url<-na.omit(read_indeed_url)
+head(read_indeed_url)
+```
+
+```{r include = F}
+ny_indeed <- ny_indeed %>% arrange(desc(ny_indeed$count))
+```
+
+```{r include = F}
+indeed_skillaggr<-aggregate(read_indeed_url$Count,by=list(Category=read_indeed_url$Skills), FUN=sum)
+indeed_skillaggr
+```
+
+```{r include = F}
+skills_count<-read_indeed_url %>%
+  group_by(Skills) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+
+skills_count
+```
+
+```{r include = F}
+skills_city<-read_indeed_url %>%
+  group_by(Skills,City) %>%
+  summarise(Total=sum(Count)) %>%
+  arrange(desc(Total))
+
+skills_city
+```
+
+```{r include = F}
+grpd <- ny_indeed %>% 
+  group_by(type) %>% 
+  select(type,count) %>% 
+  summarise(sum_by_type = sum(count))
+```
+
+```{r}
+plots_top<-tail(skills_count,10)
+
+darkcols <- brewer.pal(8,"Dark2")
+names <- plots_top$Skills
+barplot(plots_top$Total,main="Indeed Counts", horiz=TRUE, names.arg=names, las=1, col=darkcols, cex.axis=0.5, cex.names = 0.5)
+```
+
+```{r}
+top10_skills<-skills_city[1:10,]
+ggplot(top10_skills, aes(x=Skills, y=Total, colour= City, size = Total)) + geom_point()
+```
+
+```{r}
+
+library(wordcloud)
+wordcloud(skills_count$Skills,skills_count$Total, random.order=FALSE, colors=brewer.pal(8,"Dark2"))
+```
+
+Drilling down on the Data Scientist jobs in NY. Lets look at a horizontal bar chart of all skills with type indicated by the bar's color.
+```{r}
+ny_indeed$key_words <- factor(ny_indeed$key_words, levels = unique(ny_indeed$key_words)[order(ny_indeed$count, decreasing = F)])
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+key_word_plot <- plot_ly(data = ny_indeed, x= ~count, y = ~key_words, type = 'bar', orientation = 'h', color = ~type) %>% 
+  layout(title='Skills Required of Data Scientists in NY')
+
+key_word_plot
+```
+Now lets look at which type of skill was mentioned the most in job descriptions by plotting the aggregated data.
+```{r}
+grpd$type <- factor(grpd$type, levels = unique(grpd$type)[order(grpd$sum_by_type, decreasing = F)])
+sum_by_type <- plot_ly(data = grpd, x=~sum_by_type, y=~type, type = 'bar', orientation = 'h', color = ~type) %>% 
+  layout(title='NY Skills by Type')
+
+sum_by_type  
+```
 
 * > [RPubs Location of Data Analytics file](http://rpubs.com/hangrand/434343)
 
-7. > Lessons learned and possible enhancements
+7. > Conclusions, lessons learned and possible enhancements
 
-Following are the lesson leanred while working on this project
+Conclusion:  
+  
+Our findings show that many skills are required of a Data Scientist. We learned that some of the top hard skills required are Python, Machine Learning, Big Data, SQL, Excel, and R. As for soft skills, a Data Scientist is expected to communicate and have managerial experience. Mathemetics or math was also the most frequently mentioned key word in all of NY Data Scientist job postings. However, from  our NY data we cannot definitively conclude whether one type of skill is significantly more important than another. Even though we have counted more mentions of hard skills than soft or education requirements, our search included more key words for hard skills than either of the other types, so this result should be expected. Most importantly, we learned that a Data Scientist is required to be well rounded, with a strong higher education and both soft and hard skills to ensure they can get the job done.  
+  
+Following are the lesson leanred while working on this project:
 
 * Team rocks. You can always deliver more when collaborate
 * Team communication is a key. Need to leverage online tools like Video Conferencing, Slack channel, Emails for being connected
@@ -111,7 +229,7 @@ Following are the lesson leanred while working on this project
 * Time difference challenge. Need to plan conferences suiting everyone's need
 
 
-Future Enhancements
+Future Enhancements:
 
 * Gathering more data. Multiple data sources, adding more dimensions.
 * Adding multidimensional analytics with added dimensions like Geo, Regions and Countires
